@@ -12,11 +12,12 @@ const jobTypes = {
 
 // Your code will go here
 
-
+//SPECS FROM ZOLLEGE: 
 // Build a class for CrewMember.
 // Build a class for Ship.
 // Make sure CrewMembers can enter Ships.
 // Make sure to return a mission statement.
+
 
 class CrewMember {
   constructor(name, job, specialSkill, ship){
@@ -26,6 +27,19 @@ class CrewMember {
     this.ship = ship;
   }
 }
+
+class Ship{
+  constructor(name, type, ability){
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+}
+
+//Do I need this? Specific layout is in the unit tests...
+const CrewMember1 = new CrewMember ('Rick Martinez', 'pilot', 'chemistry');
+
 
 // crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
 // crewMember2 = new CrewMember('Qwilleran McTavish', 'commander', 'translator');
@@ -39,14 +53,6 @@ enterShip = (ship) => {
   this.ship.crew.push(this);
 }
 
-class Ship{
-  constructor(name, type, ability){
-    this.name = name;
-    this.type = type;
-    this.ability = ability;
-    this.crew = [];
-  }
-}
 
 missionStatement = () => {
   if (this.crew.length === 0) {
@@ -59,8 +65,6 @@ missionStatement = () => {
   return "Interplanetary Space Travel"
   }
 }  
-
-
 
 
 
