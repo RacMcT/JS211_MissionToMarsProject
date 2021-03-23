@@ -6,12 +6,59 @@ const jobTypes = {
   pilot: 'MAV',
   mechanic: 'Repair Ship',
   commander: 'Main Ship',
-  programmer: 'Any Ship!'
+  programmer: 'Any Ship!',
+  rouge: 'Shenanigans on Ship!'
 };
 
 // Your code will go here
 
 
+// Build a class for CrewMember.
+// Build a class for Ship.
+// Make sure CrewMembers can enter Ships.
+// Make sure to return a mission statement.
+
+class CrewMember {
+  constructor(name, job, specialSkill, ship){
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
+}
+
+// crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
+// crewMember2 = new CrewMember('Qwilleran McTavish', 'commander', 'translator');
+// crewMember3 = new CrewMember('Seamus Gonzalez', 'mechanic', 'explorer');
+// crewMember4 = new CrewMember('Mitchell Young', 'rouge', 'lock-picking');
+// crewMember4 = new CrewMember('Will Alrichs', 'mechanic', 'javascript');
+// crewMember4 = new CrewMember('Michael Albers', 'programmer', 'photography');
+
+enterShip = (ship) => {
+  this.ship = ship;
+  this.ship.crew.push(this);
+}
+
+class Ship{
+  constructor(name, type, ability){
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+}
+
+missionStatement = () => {
+  if (this.crew.length === 0) {
+    return "Abort mission.";
+  } 
+  else if (this.crew.length !== 0 && this.name === 'Mars Ascent Vehicle') {
+    return "Ascend into low orbit"
+  } 
+  else if (this.crew.length !== 0 && this.name === 'Hermes') {
+  return "Interplanetary Space Travel"
+  }
+}  
 
 
 
