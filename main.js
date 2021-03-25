@@ -10,14 +10,12 @@ const jobTypes = {
   rouge: 'Shenanigans on Ship!'
 };
 
-// Your code will go here
 
 //SPECS FROM ZOLLEGE: 
 // Build a class for CrewMember.
 // Build a class for Ship.
 // Make sure CrewMembers can enter Ships.
 // Make sure to return a mission statement.
-
 
 class CrewMember {
   constructor(name, job, specialSkill, ship){
@@ -51,18 +49,6 @@ class Ship{
     }
   }
 }
-
-//Do I need this? Specific layout is in the unit tests...
-
-// crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
-// crewMember2 = new CrewMember('Qwilleran McTavish', 'commander', 'translator');
-// crewMember3 = new CrewMember('Seamus Gonzalez', 'mechanic', 'explorer');
-// crewMember4 = new CrewMember('Mitchell Young', 'rouge', 'lock-picking');
-// crewMember4 = new CrewMember('Will Alrichs', 'mechanic', 'javascript');
-// crewMember4 = new CrewMember('Michael Albers', 'programmer', 'photography');
-
-
-
 
 
 // Begin by reading the tests and building a function that will full each one.
