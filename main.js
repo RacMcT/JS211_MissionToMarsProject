@@ -26,6 +26,10 @@ class CrewMember {
     this.specialSkill = specialSkill;
     this.ship = ship;
   }
+  enterShip = (ship) => {
+    this.ship = ship;
+    this.ship.crew.push(this);
+  }
 }
 
 class Ship{
@@ -35,11 +39,20 @@ class Ship{
     this.ability = ability;
     this.crew = [];
   }
+  missionStatement = () => {
+    if (this.crew.length === 0) {
+      return "Can't perform a mission yet.";
+    } 
+    else if (this.crew.length !== 0 && this.name === 'Mars Ascent Vehicle') {
+      return "Ascend into low orbit"
+    } 
+    else if (this.crew.length !== 0 && this.name === 'Hermes') {
+    return "Interplanetary Space Travel"
+    }
+  }
 }
 
 //Do I need this? Specific layout is in the unit tests...
-const CrewMember1 = new CrewMember ('Rick Martinez', 'pilot', 'chemistry');
-
 
 // crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
 // crewMember2 = new CrewMember('Qwilleran McTavish', 'commander', 'translator');
@@ -48,23 +61,7 @@ const CrewMember1 = new CrewMember ('Rick Martinez', 'pilot', 'chemistry');
 // crewMember4 = new CrewMember('Will Alrichs', 'mechanic', 'javascript');
 // crewMember4 = new CrewMember('Michael Albers', 'programmer', 'photography');
 
-enterShip = (ship) => {
-  this.ship = ship;
-  this.ship.crew.push(this);
-}
 
-
-missionStatement = () => {
-  if (this.crew.length === 0) {
-    return "Abort mission.";
-  } 
-  else if (this.crew.length !== 0 && this.name === 'Mars Ascent Vehicle') {
-    return "Ascend into low orbit"
-  } 
-  else if (this.crew.length !== 0 && this.name === 'Hermes') {
-  return "Interplanetary Space Travel"
-  }
-}  
 
 
 
